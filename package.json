@@ -1,0 +1,27 @@
+{
+  "name": "avo-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnoldRestrepo/avo-store.git"
+  },
+  "keywords": [],
+  "author": "Arnold Restrepo Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArnoldRestrepo/avo-store/issues"
+  },
+  "homepage": "https://github.com/ArnoldRestrepo/avo-store#readme",
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
