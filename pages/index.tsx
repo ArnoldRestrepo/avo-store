@@ -1,7 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import Navbar from "../components/Navbar"
-
 
 const Home = () => {
   const [productList, setProductList] = useState<TProduct[]>()
@@ -14,15 +12,14 @@ const Home = () => {
   }, [])
   
   return (
-    <div>
-      <Navbar/>
+    <section>
       <h1>Home</h1>
       <ul>
         {productList && productList.map(product => (
           <li key={product.id}>{product.name}</li>
         ))}
       </ul>
-    </div>
+    </section>
   )
 }
 

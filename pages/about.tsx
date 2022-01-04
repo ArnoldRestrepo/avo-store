@@ -1,11 +1,8 @@
-import Navbar from '../components/Navbar';
-
 const About = () => { 
   return (
-    <div>
-      <Navbar />
+    <section>
       <h1>About</h1>
-    </div>
+    </section>
   )
 }
 
