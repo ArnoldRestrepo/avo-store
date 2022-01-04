@@ -1,13 +1,11 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    // Feature for avoid the import hell or dot hell, path aliases
     "paths": {
-      "@database": [
-        "database/db.ts"
-      ],
-      "@cors": [
-        "lib/cors/cors-middleware.ts"
-      ]
+      "@database": ["database/db.ts"],
+      "@cors": ["lib/cors/cors-middleware.ts"],
+      "@components/*": ["components/*"],
     },
     "target": "es6",
     "lib": [
