@@ -1,6 +1,7 @@
 import { Layout } from 'components/Layout'
 import { AppProps } from 'next/app'
 
+
 function MyApp({ Component, pageProps }: AppProps) {
   // Use for Context/Providers, theme, data.
   // Layouts
