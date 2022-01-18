@@ -1,26 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import { Layout } from '@components/Layout'
+import fetch from 'isomorphic-unfetch'
+import ProductSummary from '@components/ProductSummary'
 
 const ProductItem = () => {
-  const { query: { productId } } = useRouter();
-  const [product, setProduct] = useState<TProduct>();
+  const {
+    query: { productId },
+  } = useRouter()
+  const [product, setProduct] = useState<TProduct>()
   useEffect(() => {
     if (productId) {
-      window.fetch(`/api/avo/${productId}`)
-        .then(res => res.json())
-        .then((data ) => {
-          console.log(data);
-          setProduct(data);
-        }); 
+      fetch(`/api/avo/${productId}`)
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data)
+          setProduct(data)
+        })
     }
   }, [productId])
-  return(
-    <div className="product-item">
-      <h1>{product?.name}</h1>
-      <img src={product?.image} alt={product?.name}/>
-      <p>Producto {product?.id}</p>
-    </div>
-  )
+  return <Layout>{product == null ? null : <ProductSummary product={product} />}</Layout>
 }
 
-export default ProductItem;
+export default ProductItem

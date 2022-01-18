@@ -1,25 +1,22 @@
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import fetch from 'isomorphic-unfetch'
+import { Layout } from '@components/Layout'
+import ProductList from '@components/ProductList'
 
 const Home = () => {
-  const [productList, setProductList] = useState<TProduct[]>()
+  const [productList, setProductList] = useState<TProduct[]>([])
   useEffect(() => {
-    window.fetch('/api/avo/')
-      .then(res => res.json())
-      .then(({ data }) => { 
+    fetch('/api/avo/')
+      .then((res) => res.json())
+      .then(({ data }: TAPIAvoResponse) => {
         setProductList(data)
-      });
+      })
   }, [])
-  
+
   return (
-    <section>
-      <h1>Home</h1>
-      <ul>
-        {productList && productList.map(product => (
-          <li key={product.id}>{product.name}</li>
-        ))}
-      </ul>
-    </section>
+    <Layout>
+      <ProductList products={productList} />
+    </Layout>
   )
 }
 
