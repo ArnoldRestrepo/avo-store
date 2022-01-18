@@ -5,7 +5,7 @@ import PuesVivo from './AnimatedHeader'
 import PuesMuero from './RottenHeader'
 import ModalHeaderContent from './ModalHeaderContent'
 
-const KawaiiHeader = () => {
+export const KawaiiHeader = () => {
   const [visible, setVisible] = useState(true)
   const [meMori, setMeMori] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
@@ -62,5 +62,3 @@ const KawaiiHeader = () => {
     </div>
   )
 }
-
-export default KawaiiHeader
