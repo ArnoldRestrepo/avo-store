@@ -6,7 +6,7 @@ const YesOrNo = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const answer = Math.round(Math.random()) ? 'Yes' : 'No'
 
-  res.status(200).json({ answer, error: null })
+  res.status(200).json({ data: answer, error: null })
 }
 
 export default YesOrNo
