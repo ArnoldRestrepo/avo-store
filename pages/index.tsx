@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import fetch from 'isomorphic-unfetch'
 import { Layout } from '@components/Layout'
 import ProductList from '@components/ProductList'
