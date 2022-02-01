@@ -21,7 +21,9 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const id = params?.productId as string
-  const response = await fetch(`https://avo-store-plum.vercel.app/api/avo/${id}`)
+  const response = await fetch(
+    `https://avo-store-plum.vercel.app/api/avo/${id}`
+  )
   const product: TProduct = await response.json()
 
   return {
@@ -30,7 +32,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 const ProductItem = ({ product }: { product: TProduct }) => {
-  return <Layout>{product == null ? null : <ProductSummary product={product} />}</Layout>
+  return (
+    <Layout>
+      {product == null ? null : <ProductSummary product={product} />}
+    </Layout>
+  )
 }
 
 export default ProductItem
