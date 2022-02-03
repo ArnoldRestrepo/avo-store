@@ -4,7 +4,7 @@ import ProductList from '@components/ProductList'
 
 const Home = ({ productList }: { productList: TProduct[] }) => {
   return (
-    <Layout>
+    <Layout title="Home">
       <ProductList products={productList} />
     </Layout>
   )

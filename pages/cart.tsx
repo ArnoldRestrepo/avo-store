@@ -9,7 +9,7 @@ const CartPage = () => {
   const { removeFromCart } = useCartMutations()
 
   return (
-    <Layout>
+    <Layout title="Cart">
       <CartItemList items={items} removeFromCart={removeFromCart} />
       <Divider />
       <CartSummary totalAmount={count} />

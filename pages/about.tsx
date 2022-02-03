@@ -32,18 +32,18 @@ const avoFacts = [
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout title="About">
       <section>
-        <Header as='h1' textAlign='center'>
+        <Header as="h1" textAlign="center">
           13 Surprising Facts About Avocados
         </Header>
         <figure>
-          <Image src='/images/avocados.jpg' alt='Avocados on a table' />
+          <Image src="/images/avocados.jpg" alt="Avocados on a table" />
           <figcaption>
             Originally from{' '}
             <a
-              target='_blank'
-              href='https://www.tasteofhome.com/article/13-surprising-facts-about-avocados/'
+              target="_blank"
+              href="https://www.tasteofhome.com/article/13-surprising-facts-about-avocados/"
             >
               Taste of Home
             </a>
@@ -52,7 +52,7 @@ const AboutPage = () => {
         <ol>
           {avoFacts.map(({ title, content }) => (
             <li key={title}>
-              <h3 className='ui header'>{title}</h3>
+              <h3 className="ui header">{title}</h3>
               <p>{content}</p>
             </li>
           ))}

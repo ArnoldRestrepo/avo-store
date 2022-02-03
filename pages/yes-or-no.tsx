@@ -10,7 +10,9 @@ type YesOrNoApiResponse = {
 
 const fetchDataYesOrNo = async () => {
   try {
-    const response = await fetch('https://avo-store-plum.vercel.app/api/yes-or-no/')
+    const response = await fetch(
+      'https://avo-store-plum.vercel.app/api/yes-or-no/'
+    )
     const { data }: YesOrNoApiResponse = await response.json()
     return data
   } catch (error) {
@@ -47,19 +49,24 @@ const YesOrNo = ({ initialResult }: { initialResult: string }) => {
   }
 
   return (
-    <Layout>
+    <Layout title="YesOrNo">
       <div>
-        <Header as='h1' color={isLoading ? 'grey' : 'green'}>
+        <Header as="h1" color={isLoading ? 'grey' : 'green'}>
           {result}
         </Header>
         <p>
-          <Button color='green' onClick={handleClick} loading={isLoading} disabled={isLoading}>
+          <Button
+            color="green"
+            onClick={handleClick}
+            loading={isLoading}
+            disabled={isLoading}
+          >
             Intentar de nuevo
           </Button>
         </p>
         <p>
-          <Link href='/'>
-            <a className='ui black button classic'>Volver al inicio</a>
+          <Link href="/">
+            <a className="ui black button classic">Volver al inicio</a>
           </Link>
         </p>
       </div>

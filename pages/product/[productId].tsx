@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const ProductItem = ({ product }: { product: TProduct }) => {
   return (
-    <Layout>
+    <Layout title={product.name}>
       {product == null ? null : <ProductSummary product={product} />}
     </Layout>
   )
